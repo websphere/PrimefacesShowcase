@@ -1,6 +1,7 @@
 *.class
 
 # Package Files #
-*.jar
 *.war
 *.ear
+/PFShow/.apt_generated
+/PFShow/WebContent/WEB-INF/classes
