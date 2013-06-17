@@ -7,4 +7,10 @@
 			<context-root>PFShow</context-root>
 		</web>
 	</module>
+	<module id="Module_1371429522029">
+		<web>
+			<web-uri>PFEShow.war</web-uri>
+			<context-root>PFEShow</context-root>
+		</web>
+	</module>
 </application>

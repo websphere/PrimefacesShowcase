@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<ui:composition template="/templates/showcaseLayout.xhtml">
+    <ui:define name="centerContent">
+        <f:facet name="header">
+            <h:outputText value="Waypoint"/>
+        </f:facet>
+        <h:panelGroup layout="block" styleClass="centerContent">
+            Waypoint makes it easy to execute a custom logic whenever you scroll to an element.
+            Waypoints make a solid base for modern UI patterns that depend on a user's scroll position on a page.
+            Application areas are countless, explore our use cases self!
+            <p/>
+            Using: Waypoint component can be used either with pe:javascript or p:ajax. There is only one event "reached".
+            A callback function called when the user scrolls past the element. In the callback function you can access
+            the scrolling direction ("down" or "up") and the current waypoint element as a DOM object.
+        </h:panelGroup>
+    </ui:define>
+    <ui:define name="useCases">
+        <ui:include src="/sections/waypoint/useCasesChoice.xhtml"/>
+    </ui:define>
+    <ui:define name="docuTable">
+        <ui:include src="/sections/shared/documentation.xhtml">
+            <ui:param name="tagName" value="waypoint"/>
+        </ui:include>
+    </ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:showcase="http://primefaces.org/ui/extensions/showcase">
+<ui:composition template="/templates/showcaseLayout.xhtml">
+    <ui:define name="centerContent">
+        <f:facet name="header">
+            <h:outputText value="BlockUI"/>
+        </f:facet>
+        <h:panelGroup layout="block" styleClass="centerContent">
+            This example shows how to use "autoShow" mode activated by setting "autoShow" attribute to true.
+            Another features are "event" and "targetSelector" attributes. Attribute "event" specifies which events should be listen.
+            Skipping "event" means we are not interested in any events. That means all events of the source component cause a blocking of the target component(s).
+            Only events specified by p:ajax are supported. PrimeFaces components can also send ajax requests without p:ajax, but such events are internal and not exposed.
+            We don't support such events intentional. Attribute "targetSelector" allows to specify several targets and HTML elements to be blocked.
+            This is a quite normally jQuery selector. To block the entire page use targetSelector="document" please.
+            Try to expand, select, unselect a tree node on the left side or click on any checkbox on the right side.
+        </h:panelGroup>
+
+        <h:panelGroup layout="block" styleClass="centerExample">
+            <ui:include src="/sections/blockui/example-blockUIAutoShow.xhtml"/>
+        </h:panelGroup>
+
+        <ui:decorate template="/templates/twoTabsDecorator.xhtml">
+            <ui:define name="contentTab1">
+${showcase:getFileContent('/sections/blockui/example-blockUIAutoShow.xhtml')}
+            </ui:define>
+            <ui:define name="contentTab2">
+${showcase:getFileContent('/org/primefaces/extensions/showcase/controller/blockui/FileSystemController.java')}
+
+${showcase:getFileContent('/org/primefaces/extensions/showcase/controller/blockui/AccessRightsController.java')}
+            </ui:define>
+        </ui:decorate>
+    </ui:define>
+    <ui:define name="useCases">
+        <ui:include src="/sections/blockui/useCasesChoice.xhtml"/>
+    </ui:define>
+    <ui:define name="docuTable">
+        <ui:include src="/sections/shared/documentation.xhtml">
+            <ui:param name="tagName" value="blockUI"/>
+        </ui:include>
+    </ui:define>
+</ui:composition>
+</html>

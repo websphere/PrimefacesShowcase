@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pe="http://primefaces.org/ui/extensions">
+<f:view contentType="text/html" locale="en">
+    <pe:head title="PrimeFaces Extensions - ShowCase" shortcutIcon="#{request.contextPath}/favicon.ico">
+        <f:facet name="first">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <meta http-equiv="pragma" content="no-cache"/>
+            <meta http-equiv="cache-control" content="no-cache"/>
+            <meta http-equiv="expires" content="0"/>
+        </f:facet>
+    </pe:head>
+    <h:body>
+        <ui:insert name="ajaxErrorHandler">
+            <!-- Enable ajaxErrorHandler -->
+            <pe:ajaxErrorHandler widgetVar="ajaxErrorHandler" button="Hide" buttonOnclick="ajaxErrorHandler.hide();" />
+            <pe:ajaxErrorHandler type="javax.faces.application.ViewExpiredException" button="Reload" buttonOnclick="document.location.href=document.location.href;" />
+        </ui:insert>
+
+        <pe:layout id="fpl" widgetVar="fullLayoutWidget" options="#{showcaseLayout.options}">
+            <pe:layoutPane position="north">
+                <h:form id="headerForm" prependId="false">
+                    <ui:insert name="header"/>
+                </h:form>
+            </pe:layoutPane>
+            <h:form id="mainForm" prependId="false">
+                <ui:insert name="center"/>
+                <pe:layoutPane position="south">
+                    <ui:insert name="footer"/>
+                </pe:layoutPane>
+            </h:form>
+        </pe:layout>
+
+        <h:form id="themeForm" prependId="false">
+            <h:panelGrid columns="2" styleClass="themeRoller" columnClasses="themeText,themeSelect">
+                <h:outputText value="Theme"/>
+                <p:selectOneMenu id="themeSelectMenu" value="#{userSettings.currentTheme}" var="theme" effect="drop"
+                                 onchange="$('#themeForm').submit()">
+                    <f:converter converterId="org.primefaces.extensions.showcase.converter.ThemeConverter"/>
+                    <f:selectItems var="t"
+                                   value="#{userSettings.availableThemes}"
+                                   itemLabel="#{t.name}"
+                                   itemValue="#{t}"/>
+                    <p:column>
+                        <p:graphicImage value="#{theme.image}" rendered="${not empty theme.image}"/>
+                    </p:column>
+                    <p:column>
+                        #{theme.name}
+                    </p:column>
+                </p:selectOneMenu>
+            </h:panelGrid>
+        </h:form>
+        <ui:insert name="dialogs"/>
+        <ui:insert name="resources-app"/>
+    </h:body>
+</f:view>
+</html>

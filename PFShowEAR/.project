@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>PFShow</project>
+		<project>PFEShow</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
