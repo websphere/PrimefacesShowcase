@@ -5,3 +5,5 @@
 *.ear
 /PFShow/.apt_generated
 /PFShow/WebContent/WEB-INF/classes
+/classes
+/.apt_generated
