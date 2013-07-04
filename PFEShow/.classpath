@@ -12,7 +12,43 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src/resources"/>
 	<classpathentry kind="src" path="src/java"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/all-themes-1.0.10.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/async-http-client-1.7.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/atmosphere-compat-jbossweb-1.0.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/atmosphere-compat-tomcat-1.0.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/atmosphere-compat-tomcat7-1.0.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/atmosphere-runtime-1.0.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/barbecue-1.5-beta1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/commons-codec-1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/commons-fileupload-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/commons-io-2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/commons-lang3-3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/commons-logging-1.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/gson-2.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/itext-2.1.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/javax.faces-2.1.23.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/jboss-el-2.0.2.CR2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/jcommon-1.0.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/jdom-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/jfreechart-1.0.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/jstl-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/juel-impl-2.2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/juel-spi-2.2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/netty-3.4.4.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/poi-3.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/poi-ooxml-3.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/poi-ooxml-schemas-3.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/primefaces-4.0-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/primefaces-extensions-1.0.0-20130616.040449-35.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/primefaces-mobile-0.9.5-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/resources-ckeditor-1.0.0-20130616.040539-35.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/resources-codemirror-1.0.0-20130616.040655-35.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/rome-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/slf4j-simple-1.6.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/stax-api-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/PFShowEAR/lib/xmlbeans-2.3.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.ibm.ws.ast.st.runtime.runtimeTarget.v70/was.base.v7">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.web"/>
